@@ -1,0 +1,20 @@
+{
+  "name": "u.log.js",
+  "repository": "iamso/u.log.js",
+  "description": "console helper functions for u.js",
+  "version": "0.1.0",
+  "keywords": [
+    "micro",
+    "framework",
+    "utility",
+    "library",
+    "jQuery",
+    "ki.js"
+  ],
+  "scripts": [
+    "dist/u.log.js",
+    "dist/u.log.min.js",
+    "dist/u.log.min.js.map"
+  ],
+  "license": "MIT"
+}
