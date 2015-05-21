@@ -35,7 +35,7 @@
 
     	})(data, prefix);
 
-      this.history.push({fn: 'table', arg: table});
+      this.history.push({fn: 'table', arg: u.toArray(arguments)});
     	window._debug && console.table(table);
 
     },
@@ -64,21 +64,21 @@
 
     time: function(label) {
 
-      this.history.push({fn: 'time', arg: label});
+      this.history.push({fn: 'time', arg: [label]});
       window._debug && console.time(label);
 
     },
 
     timeEnd: function(label) {
 
-      this.history.push({fn: 'timeEnd', arg: label});
+      this.history.push({fn: 'timeEnd', arg: [label]});
       window._debug && console.timeEnd(label);
 
     },
 
     timeStamp: function(label) {
 
-      this.history.push({fn: 'timeStamp', arg: label});
+      this.history.push({fn: 'timeStamp', arg: [label]});
       window._debug && console.timeStamp(label);
 
     },
