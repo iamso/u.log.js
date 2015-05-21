@@ -1,6 +1,6 @@
 {
   "name": "u.log.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "console helper functions for u.js",
   "repository": {
     "type": "git",
@@ -27,9 +27,11 @@
     "src"
   ],
   "keywords": [
-    "micro",
-    "framework",
-    "utility",
-    "library"
+    "u.js",
+    "console",
+    "helper",
+    "debugging",
+    "log",
+    "logging"
   ]
 }

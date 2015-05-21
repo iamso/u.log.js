@@ -2,14 +2,14 @@
   "name": "u.log.js",
   "repository": "iamso/u.log.js",
   "description": "console helper functions for u.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
-    "micro",
-    "framework",
-    "utility",
-    "library",
-    "jQuery",
-    "ki.js"
+    "u.js",
+    "console",
+    "helper",
+    "debugging",
+    "log",
+    "logging"
   ],
   "scripts": [
     "dist/u.log.js",
