@@ -1,9 +1,9 @@
 /*!
- * u.log.js - Version 0.1.1
+ * u.log.js - Version 0.1.2
  * console helper functions for u.js
  * Author: Steve Ottoz <so@dev.so>
- * Build date: 2015-05-21
- * Copyright (c) 2015 Steve Ottoz
+ * Build date: 2016-01-22
+ * Copyright (c) 2016 Steve Ottoz
  * Released under the MIT license
  */
 (function(u,window,document,console,undefined) {
