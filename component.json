@@ -2,7 +2,7 @@
   "name": "u.log.js",
   "repository": "iamso/u.log.js",
   "description": "console helper functions for u.js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "keywords": [
     "u.js",
     "console",
