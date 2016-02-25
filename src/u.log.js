@@ -123,4 +123,4 @@
 
   };
 
-})(u,window,document,console);
+})(ujs,window,document,console);
