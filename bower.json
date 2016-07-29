@@ -1,7 +1,7 @@
 {
   "name": "u.log.js",
-  "version": "0.1.3",
-  "description": "console helper functions for u.js",
+  "version": "0.2.0",
+  "description": "console helper functions for u.js/jquery",
   "repository": {
     "type": "git",
     "url": "git://github.com/iamso/u.log.js.git"
@@ -28,6 +28,7 @@
   ],
   "keywords": [
     "u.js",
+    "jquery",
     "console",
     "helper",
     "debugging",
@@ -35,6 +36,7 @@
     "logging"
   ],
   "dependencies": {
-    "u.js": "0.*"
+    "u.js": "0.*",
+    "jquery": "*"
   }
 }
