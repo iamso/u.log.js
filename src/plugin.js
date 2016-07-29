@@ -1,15 +1,15 @@
-
-(function(u,window,document,console,undefined) {
   'use strict';
 
-  u.log = {
+  $.log = {
+
+    c: console,
 
     history: [],
 
     log: function() {
 
-      this.history.push({fn: 'log', arg: u.toArray(arguments)});
-      window._debug && console.log.apply(console, arguments);
+      this.history.push({fn: 'log', arg: $.makeArray(arguments)});
+      window._debug && this.c.log.apply(console, arguments);
 
     },
 
@@ -25,7 +25,7 @@
     		for (i in data) {
 
     			value = data[i];
-    			isArray = u.isArray(value);
+    			isArray = $.isArray(value);
 
     			(/^o/.test(typeof value) && !isArray) ?
     				toTable(data[i], prefix ? prefix + '.' + i : i) :
@@ -35,58 +35,58 @@
 
     	})(data, prefix);
 
-      this.history.push({fn: 'table', arg: u.toArray(arguments)});
-    	window._debug && console.table(table);
+      this.history.push({fn: 'table', arg: $.makeArray(arguments)});
+    	window._debug && this.c.table(table);
 
     },
 
 
     error: function() {
 
-      this.history.push({fn: 'error', arg: u.toArray(arguments)});
-      window._debug && console.error.apply(console, arguments);
+      this.history.push({fn: 'error', arg: $.makeArray(arguments)});
+      window._debug && this.c.error.apply(console, arguments);
 
     },
 
     info: function() {
 
-      this.history.push({fn: 'info', arg: u.toArray(arguments)});
-      window._debug && console.info.apply(console, arguments);
+      this.history.push({fn: 'info', arg: $.makeArray(arguments)});
+      window._debug && this.c.info.apply(console, arguments);
 
     },
 
     warn: function() {
 
-      this.history.push({fn: 'warn', arg: u.toArray(arguments)});
-      window._debug && console.warn.apply(console, arguments);
+      this.history.push({fn: 'warn', arg: $.makeArray(arguments)});
+      window._debug && this.c.warn.apply(console, arguments);
 
     },
 
     time: function(label) {
 
       this.history.push({fn: 'time', arg: [label]});
-      window._debug && console.time(label);
+      window._debug && this.c.time(label);
 
     },
 
     timeEnd: function(label) {
 
       this.history.push({fn: 'timeEnd', arg: [label]});
-      window._debug && console.timeEnd(label);
+      window._debug && this.c.timeEnd(label);
 
     },
 
     timeStamp: function(label) {
 
       this.history.push({fn: 'timeStamp', arg: [label]});
-      window._debug && console.timeStamp(label);
+      window._debug && this.c.timeStamp(label);
 
     },
 
     trace: function() {
 
-      this.history.push({fn: 'trace', arg: u.toArray(arguments)});
-      window._debug && console.trace.apply(console, arguments);
+      this.history.push({fn: 'trace', arg: $.makeArray(arguments)});
+      window._debug && this.c.trace.apply(console, arguments);
 
     },
 
@@ -94,13 +94,13 @@
 
       label = label || '';
 
-      this.history.push({fn: 'group', arg: u.toArray(arguments)});
+      this.history.push({fn: 'group', arg: $.makeArray(arguments)});
     	if (window._debug) {
-    		console.group(label);
+    		this.c.group(label);
     		for (var i in data) {
     			console[data[i].fn].apply(console, data[i].arg);
     		}
-    		console.groupEnd(label);
+    		this.c.groupEnd(label);
     	}
 
     },
@@ -117,10 +117,8 @@
 
     clear: function() {
 
-      window._debug && console.clear();
+      window._debug && this.c.clear();
 
     }
 
   };
-
-})(ujs,window,document,console);

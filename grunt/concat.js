@@ -7,8 +7,20 @@ module.exports = {
     },
     banner: '<%= banner %>',
   },
-  dist: {
-    src: ['src/u.log.js'],
+  ujs: {
+    src: [
+      'src/umd/ujs.js',
+      'src/plugin.js',
+      'src/umd/end.js',
+    ],
     dest: 'dist/u.log.js'
+  },
+  jquery: {
+    src: [
+      'src/umd/jquery.js',
+      'src/plugin.js',
+      'src/umd/end.js',
+    ],
+    dest: 'dist/jquery.log.js'
   }
 };

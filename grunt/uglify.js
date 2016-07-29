@@ -9,11 +9,18 @@ module.exports = {
     preserveComments: false,
     sourceMap: true
   },
-  dist: {
+  ujs: {
     options: {
       banner: '<%= banner %>'
     },
     src: ['dist/u.log.js'],
     dest: 'dist/u.log.min.js'
+  },
+  jquery: {
+    options: {
+      banner: '<%= banner %>'
+    },
+    src: ['dist/jquery.log.js'],
+    dest: 'dist/jquery.log.min.js'
   }
 };
